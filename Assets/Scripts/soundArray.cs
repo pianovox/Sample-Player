@@ -7,45 +7,64 @@ public class soundArray : MonoBehaviour
 	public static AudioClip[] list;
 	public AudioClip clip;
 	public int ButtonID;
-	public static int BankID = 60;
-//	public Button myButton;
+	public static int BankID = 0;
+
+
+	string audioPath;
+	//	HELP! Trying to connect to the inspector so I can use isInteractable or 
+	//	change color if it's disabled
+	//	public Button myButton; 
 	
 	void Start ()
 	{		
 		if (clip == null) {
-			string file = "Audio/" + (1000 + BankID + ButtonID + 1);
-			clip = (AudioClip)Resources.Load (file); 
-			print (file);
+
+			//	HELP! I know I'm reusing this line over and over. 
+			//	I can't initialize it up top because of ButtonID
+
+			audioPath = "Audio/" + (1000 + (BankID * 10) + ButtonID + 1);
+			clip = (AudioClip)Resources.Load (audioPath); 
+			print (audioPath);
 		}
 	}
-
-	public void Click ()
-	{
+	
+	public void Click () {
 		if (clip == null) {
-			string file = "Audio/" + (1000 + BankID + ButtonID + 1);
-			clip = (AudioClip)Resources.Load (file); 
-			print (file);
+			audioPath = "Audio/" + (1000 + (BankID * 10) + ButtonID + 1);
+			clip = (AudioClip)Resources.Load (audioPath); 
+			print (audioPath);
 
-//			if (!myButton.IsInteractable ()) 
-//			{
-//				Debug.Log("Start Button has been Disabled");
+//			if (!myButton.IsInteractable ()) {
+//				Debug.Log("Button has been Disabled");
 //			}
 
 		} else {
-			//if (Input.GetMouseButtonDown(0)) {
+			//	This is leftover. Disregard.
+			//	if (Input.GetMouseButtonDown(0)) {
+
+			audioPath = "Audio/" + (1000 + (BankID * 10) + ButtonID + 1);
+			clip = (AudioClip)Resources.Load (audioPath); 
 			AudioSource.PlayClipAtPoint (clip, new Vector3 (5, 1, 2));
 			print (ButtonID);	
 		}
 	}
 
-	public void BankUp ()
-	{
-		BankID += 10;
+	public void BankUp (){
+		BankID += 1;
 		print (BankID);
 	}
 
-	public void BankDown ()
-	{
+	public void BankDown (){
+		BankID -= 1;
+		print (BankID);
+	}
+
+	public void BankUpX10 (){
+		BankID += 10;
+		print (BankID);
+	}
+	
+	public void BankDownX10 (){
 		BankID -= 10;
 		print (BankID);
 	}
