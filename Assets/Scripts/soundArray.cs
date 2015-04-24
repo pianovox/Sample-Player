@@ -4,14 +4,14 @@ using UnityEngine.UI;
 
 public class soundArray : MonoBehaviour
 {
-	AudioClip clip;
+	public AudioClip clip;
 	AudioSource aSource;
 	public int ButtonID;
 	public static int BankID = 0;
 	public Text bankNumberText;
 	public Text buttonText;
-	string audioPath;
-	
+	public static string audioPath;
+
 
 	void Start ()
 	{	
@@ -29,13 +29,8 @@ public class soundArray : MonoBehaviour
 
 		bankNumberText.text = "Bank: " + BankID +"\n" + lowBank + " - " + highBank;
 
-
-
-
 	}
-
-
-	
+		
 	public void Click ()
 	{
 		if (clip == null) {
@@ -68,9 +63,7 @@ public class soundArray : MonoBehaviour
 		return aSource; 											// return the AudioSource reference
 	
 	}
-
-
-
+	
 	public void BankUp ()
 	{
 		BankID += 1;
