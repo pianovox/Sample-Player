@@ -4,9 +4,7 @@ using UnityEngine.UI;
 
 public class FileButton : MonoBehaviour
 {
-	
 	public int ButtonID;
-	public Text fileButtonText;
 	public static string audioPath;
 	public AudioClip clip;
 	AudioSource aSource;
@@ -25,10 +23,8 @@ public class FileButton : MonoBehaviour
 		if (clip == null) {
 			audioPath = "Audio/" + (1000 + (BankButtons.BankID * 10) + ButtonID + 1);
 			clip = (AudioClip)Resources.Load (audioPath); 
-			print (audioPath);
-				
+			print (audioPath);				
 		} else {
-				
 			audioPath = "Audio/" + (1000 + (BankButtons.BankID * 10) + ButtonID + 1);
 			clip = (AudioClip)Resources.Load (audioPath); 
 			print (ButtonID);				
@@ -48,8 +44,5 @@ public class FileButton : MonoBehaviour
 		aSource.Play(); 											// start the sound
 		Destroy(tempGO, clip.length); 								// destroy object after clip duration
 		return aSource; 											// return the AudioSource reference
-		
 	}
-	
-	
 }

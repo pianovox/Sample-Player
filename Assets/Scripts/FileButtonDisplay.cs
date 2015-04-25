@@ -5,15 +5,26 @@ using UnityEngine.UI;
 public class FileButtonDisplay : MonoBehaviour
 {
 	public int fileNumber;
+	public int fileButtonID;
 	public Text fileLabel;
+
+	void Start()
+	{
+		DisplayFileButton ();
+		DimEmptyButtons ();
+	}
 
 	public Text DisplayFileButton()
 	{
-		fileNumber = GameObject.Find ("FileButtons").GetComponent<FileButton>().ButtonID ;
-		fileLabel.text = "" +fileNumber;
+		fileNumber = fileButtonID ;
+		fileLabel.text = "" + (1000 + (BankButtons.BankID * 10) + fileButtonID + 1); 
 		return fileLabel;
 	}
 
+	public void DimEmptyButtons() {
+
+		// change color or otherwise indicate if button clip is null
+	}
 
 	
 }

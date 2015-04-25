@@ -7,7 +7,6 @@ public class BankDisplay : MonoBehaviour {
 	public Text bankDisplay;
 	private string currentBank;
 
-
 	void Start () 
 	{
 		DisplayBank ();
@@ -21,7 +20,4 @@ public class BankDisplay : MonoBehaviour {
 		bankDisplay.text = currentBank;
 		return bankDisplay;
 	}
-
-
-
 }
