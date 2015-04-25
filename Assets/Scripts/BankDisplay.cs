@@ -10,7 +10,7 @@ public class BankDisplay : MonoBehaviour {
 
 	void Start () 
 	{
-
+		DisplayBank ();
 	}
 	
 	public string DisplayBank ()
@@ -18,7 +18,8 @@ public class BankDisplay : MonoBehaviour {
 		string lowBank = "" + (1000 + (BankButtons.BankID * 10) + 1);
 		string highBank = "" + (1000 + (BankButtons.BankID * 10) + 10);	
 		currentBank	= "Bank: " + BankButtons.BankID + "\n" + lowBank + " - " + highBank;
-		return currentBank;
+		bankDisplay.text = currentBank;
+		return bankDisplay.text;
 	}
 
 

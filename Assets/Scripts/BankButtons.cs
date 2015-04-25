@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class BankButtons : MonoBehaviour {
 
 	public static int BankID = 0;
@@ -40,6 +41,7 @@ public class BankButtons : MonoBehaviour {
 	public void UpdateAllValues()
 	{
 		// bang values to display new bank and file info
+		GameObject.Find(BankDisplay).GetComponent<DisplayBank> ();
 
 	}
 }
