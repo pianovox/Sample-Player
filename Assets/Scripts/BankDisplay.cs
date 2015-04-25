@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class BankDisplay : MonoBehaviour {
 
 	public Text bankDisplay;
-	public static string currentBank;
+	private string currentBank;
 
 
 	void Start () 

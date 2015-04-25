@@ -4,14 +4,14 @@ using UnityEngine.UI;
 
 public class FileButtonDisplay : MonoBehaviour
 {
-	public string fileNumber;
+	public int fileNumber;
+	public Text fileLabel;
 
-	public string DisplayFileButton()
+	public Text DisplayFileButton()
 	{
-		// Get file number from FileButton script but it must be attached to the correct object
-		// return the file number as a string and make it public
-		// fileNumber = 
-		return fileNumber;
+		fileNumber = GameObject.Find ("FileButtons").GetComponent<FileButton>().ButtonID ;
+		fileLabel.text = "" +fileNumber;
+		return fileLabel;
 	}
 
 
