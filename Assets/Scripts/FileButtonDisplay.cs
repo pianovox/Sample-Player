@@ -17,7 +17,7 @@ public class FileButtonDisplay : MonoBehaviour
 	public Text DisplayFileButton()
 	{
 		fileNumber = fileButtonID ;
-		fileLabel.text = "" + (1000 + (BankButtons.BankID * 15) + fileButtonID + 1); 
+		fileLabel.text = "" + (1000 + (BankButtons.BankID * 10) + fileButtonID + 1); 
 		return fileLabel;
 	}
 

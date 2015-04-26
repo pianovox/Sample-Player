@@ -4,8 +4,13 @@ using UnityEngine.UI;
 
 public class BankButtons : MonoBehaviour
 {
-	public static int BankID = 0;
+	public static int BankID;
 	public BankDisplay bankInfo;
+
+	void Start()
+	{
+		BankID = 4;
+	}
 
 	public void BankUp ()
 	{
