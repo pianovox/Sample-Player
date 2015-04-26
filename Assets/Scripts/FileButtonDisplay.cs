@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class FileButtonDisplay : MonoBehaviour
 {
-	public int fileNumber;
+
 	public int fileButtonID;
 	public Text fileLabel;
 
@@ -16,7 +16,6 @@ public class FileButtonDisplay : MonoBehaviour
 
 	public Text DisplayFileButton()
 	{
-		fileNumber = fileButtonID ;
 		fileLabel.text = "" + (1000 + (BankButtons.BankID * 10) + fileButtonID + 1); 
 		return fileLabel;
 	}
