@@ -38,8 +38,11 @@ public class BankButtons : MonoBehaviour
 	public void UpdateAllValues ()
 	{
 		// bang values to display new bank and file info
+
 		GameObject.Find ("bankDisplayer").GetComponent<BankDisplay> ().DisplayBank ();
-		GameObject.Find ("FileButtons").GetComponent<FileButtonDisplay> ().DisplayFileButton ();
+//		GameObject.Find ("FileButtons").GetComponent<FileButtonDisplay> ().DisplayFileButton ();
+
+
 		// change color or otherwise indicate if button clip is null
 		// FileButtonDisplay.DimEmptyButtons():
 	}
