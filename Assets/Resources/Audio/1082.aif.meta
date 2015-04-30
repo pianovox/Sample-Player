@@ -1,13 +1,13 @@
 fileFormatVersion: 2
 guid: 030d0372aa7ad4728954506e18b341a7
-timeCreated: 1429653913
+timeCreated: 1430413140
 licenseType: Free
 AudioImporter:
   serializedVersion: 6
   defaultSettings:
     loadType: 0
     sampleRateSetting: 0
-    sampleRateOverride: 0
+    sampleRateOverride: 44100
     compressionFormat: 1
     quality: 1
     conversionMode: 0
