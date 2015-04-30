@@ -12,20 +12,20 @@ public class FileButton : MonoBehaviour
 	void Start ()
 	{	
 		if (clip == null) {
-			audioPath = "Audio/" + (1000 + (BankButtons.BankID * 10) + ButtonID + 1);
+			audioPath = "Audio/" + (1000 + (ButtonController.BankID * 10) + ButtonID + 1);
 			clip = (AudioClip)Resources.Load (audioPath); 
-			print (audioPath);
+//			print (audioPath);
 		}
 	}
 
 	public void Click ()
 	{
 		if (clip == null) {
-			audioPath = "Audio/" + (1000 + (BankButtons.BankID * 10) + ButtonID + 1);
+			audioPath = "Audio/" + (1000 + (ButtonController.BankID * 10) + ButtonID + 1);
 			clip = (AudioClip)Resources.Load (audioPath); 
 			print (audioPath);				
 		} else {
-			audioPath = "Audio/" + (1000 + (BankButtons.BankID * 10) + ButtonID + 1);
+			audioPath = "Audio/" + (1000 + (ButtonController.BankID * 10) + ButtonID + 1);
 			clip = (AudioClip)Resources.Load (audioPath); 
 			print (ButtonID);				
 			PlayClipAt (clip, transform.position);

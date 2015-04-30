@@ -9,7 +9,5 @@ public class PanicButon : MonoBehaviour {
 	{
 		TurnMeOff = GameObject.Find ("TempAudio");
 		Destroy (TurnMeOff);
-
 	}
-
 }

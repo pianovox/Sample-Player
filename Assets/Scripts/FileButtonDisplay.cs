@@ -8,22 +8,27 @@ public class FileButtonDisplay : MonoBehaviour
 	public int fileButtonID;
 	public Text fileLabel;
 
-	void Start()
+
+	void Start ()
 	{
 		DisplayFileButton ();
-		DimEmptyButtons ();
+		print (ButtonController.BankID);
+//		DimEmptyButtons ();
 	}
 
-	public Text DisplayFileButton()
+
+	public Text DisplayFileButton ()
 	{
-		fileLabel.text = "" + (1000 + (BankButtons.BankID * 10) + fileButtonID + 1); 
+		fileLabel.text = "" + (1000 + (ButtonController.BankID * 10) + fileButtonID + 1); 
 		return fileLabel;
 	}
 
-	public void DimEmptyButtons() {
+	public void DimEmptyButtons ()
+	{
 
 		// change color or otherwise indicate if button clip is null
 	}
 
-	
+
+
 }
