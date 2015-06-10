@@ -1,13 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/FileButtonDisplay.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../UNITY/GitClone/Muziogram/AppProject/Assets/Scripts/Sequencer/PlaybackSample.cs">
     <Files>
-      <File FileName="Assets/Scripts/PanicButon.cs" Line="7" Column="2" />
-      <File FileName="Assets/Scripts/FileButtonDisplay.cs" Line="19" Column="1" />
-      <File FileName="Assets/Scripts/BankButtons.cs" Line="46" Column="1" />
-      <File FileName="Assets/Scripts/BankDisplay.cs" Line="19" Column="51" />
-      <File FileName="Assets/Scripts/FileButton.cs" Line="28" Column="59" />
-      <File FileName="Assets/Scripts/ButtonController.cs" Line="6" Column="2" />
+      <File FileName="../UNITY/GitClone/Muziogram/AppProject/Assets/Scripts/Sequencer/PlaybackSample.cs" Line="281" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
