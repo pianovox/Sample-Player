@@ -7,10 +7,27 @@ public class BankButtons : MonoBehaviour
 //	public static int BankID;
 //	public BankDisplay bankInfo;
 
-	void Start()
+	void Start ()
 	{
 
 	}
+
+	void LateUpdate ()
+	{
+
+		if (Input.GetKeyDown (KeyCode.Alpha1)) {
+			BankDown ();
+			print ("you pressed 1");
+		}
+
+		if (Input.GetKeyDown (KeyCode.Alpha2)) {
+			BankUp ();
+			print ("you pressed 2");
+		}
+
+	}
+
+
 
 	public void BankUp ()
 	{
@@ -42,7 +59,7 @@ public class BankButtons : MonoBehaviour
 
 	public void UpdateAllValues ()
 	{
-				GameObject.Find ("bankDisplayer").GetComponent<BankDisplay> ().DisplayBank ();
-				GameObject.Find ("FileButtons").GetComponent<FileButtonDisplay> ().DisplayFileButton ();
+		GameObject.Find ("bankDisplayer").GetComponent<BankDisplay> ().DisplayBank ();
+		//GameObject.Find ("FileButtons").GetComponent<FileButtonDisplay> ().DisplayFileButton ();
 	}
 }
